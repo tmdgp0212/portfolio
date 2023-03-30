@@ -7,9 +7,30 @@ export const Header = styled.div`
   width: 100vw;
 
   .container {
+    display: flex;
+    align-items: center;
     max-width: 1480px;
-    height: 60px;
+    height: 80px;
     margin: 0 auto;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+
+      img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 32px;
+      }
+    }
   }
 `;
 
