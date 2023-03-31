@@ -35,7 +35,7 @@ export const Header = styled.div`
   left: 0;
   width: 100vw;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   z-index: 5;
 
   .container {
@@ -130,8 +130,7 @@ export const Intro = styled.div`
           align-items: center;
           gap: 5px;
 
-          svg,
-          img {
+          svg {
             width: 28px;
             height: 28px;
           }
@@ -166,6 +165,12 @@ export const Project = styled.div`
   display: flex;
   justify-content: center;
   gap: 36px;
+  margin: 0 auto 40px;
+  padding: 40px;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  cursor: default;
 
   .thumbnail {
     position: relative;
@@ -193,29 +198,19 @@ export const Project = styled.div`
     .project__scale {
       display: block;
       margin-bottom: 5px;
-      padding: 5px 12px;
+      padding: 5px 8px;
       width: fit-content;
       color: #fff;
+      font-size: 14px;
       font-weight: 600;
       background-color: var(--deep-purple);
-      border-radius: 8px;
+      border-radius: 4px;
     }
 
-    .project__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      h3 {
-        font-size: var(--font-medium);
-        font-weight: 600;
-        line-height: 1.5;
-      }
-
-      .links {
-        display: flex;
-        gap: 10px;
-      }
+    h3 {
+      font-size: var(--font-medium);
+      font-weight: 600;
+      line-height: 1.5;
     }
 
     .summary {
@@ -240,6 +235,32 @@ export const Project = styled.div`
         &:before {
           content: "•";
           margin-right: 8px;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-top: 20px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        width: 100px;
+        padding: 8px;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        background-color: var(--deep-purple);
+        border-radius: 4px;
+
+        svg {
+          width: 12px;
+          height: 12px;
         }
       }
     }

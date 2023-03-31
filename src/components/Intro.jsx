@@ -1,4 +1,9 @@
-import { BsEnvelopeAt, BsTelephoneFill, BsGithub } from "react-icons/bs";
+import {
+  BsEnvelopeAt,
+  BsTelephoneFill,
+  BsGithub,
+  BsVimeo,
+} from "react-icons/bs";
 import { copyText } from "../util/copyText";
 import * as S from "../style/styleComponents";
 
@@ -41,7 +46,7 @@ function Intro() {
           </div>
           <div className="profile__item">
             <a href="https://velog.io/@tmdgp0212" target={"_blank"}>
-              <img src="/assets/velog.png" alt="" />
+              <BsVimeo />
             </a>
           </div>
         </div>

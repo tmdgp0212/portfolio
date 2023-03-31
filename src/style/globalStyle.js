@@ -18,6 +18,16 @@ const GlobalStyle = createGlobalStyle`
 	--max-width: 1480px;
 }
 
+
+*::selection {
+  background-color: var(--light-purple);
+  /* color: $light-gray; */
+}
+::-moz-selection {
+	background-color: var(--light-purple);
+	color: #fff;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

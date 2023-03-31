@@ -1,5 +1,6 @@
-import * as S from "../style/styleComponents";
+import { BsArrowUpRight } from "react-icons/bs";
 import { CreateBadge } from "../util/CreateBadge";
+import * as S from "../style/styleComponents";
 
 function Project({
   team,
@@ -22,17 +23,9 @@ function Project({
         <span className="project__scale">
           {team ? "Team Project" : "Personal Project"}
         </span>
-        <div className="project__header">
-          <h3>{title}</h3>
-          <div className="links">
-            <a target="_blank" href={github}>
-              Github
-            </a>
-            <a target="_blank" href={site}>
-              Demo Site
-            </a>
-          </div>
-        </div>
+
+        <h3>{title}</h3>
+
         <ul className="summary">
           <li>작업인원: {worker}인</li>
           <li>작업기간: {date}</li>
@@ -45,6 +38,16 @@ function Project({
           <li>라이브러리: {library}</li>
         </ul>
         <ul className="detail">{children}</ul>
+        <div className="links">
+          <a target="_blank" href={github}>
+            Github
+            <BsArrowUpRight />
+          </a>
+          <a target="_blank" href={site}>
+            Site
+            <BsArrowUpRight />
+          </a>
+        </div>
       </div>
     </S.Project>
   );

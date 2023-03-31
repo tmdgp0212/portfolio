@@ -6,9 +6,7 @@ function Header() {
       <div className="container">
         <h1>
           <img src="/assets/logo.png" alt="logo" />
-          SeungHye
-          <br />
-          Portfolio
+          SeungHye Portfolio
         </h1>
       </div>
     </S.Header>
