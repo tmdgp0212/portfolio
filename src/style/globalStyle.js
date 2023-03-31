@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
 :root {
 	--light-purple: #F3E7FE;
 	--deep-purple: #602ed5;
+
+	--font-large: 36px;
+	--font-medium: 28px;
+	--max-width: 1480px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -44,6 +48,10 @@ body {
 	color: #222;
 	font-family: 'Pretendard-Regular';
 	line-height: 1.2;
+
+	&::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 ol, ul {
 	list-style: none;

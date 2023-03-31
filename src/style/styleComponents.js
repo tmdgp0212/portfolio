@@ -1,17 +1,50 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const spin = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Loading = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+
+  img {
+    width: 60px;
+    height: 60px;
+    animation: ${spin} 3s infinite linear;
+  }
+`;
 
 export const Header = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
 
   .container {
     display: flex;
     align-items: center;
-    max-width: 1480px;
-    height: 80px;
+    max-width: var(--max-width);
+    height: 65px;
     margin: 0 auto;
+    padding: 0 40px;
 
     h1 {
       display: flex;
@@ -34,11 +67,12 @@ export const Header = styled.div`
   }
 `;
 
-export const Main = styled.div`
+export const Intro = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 28px;
+  position: relative;
   width: 100vw;
   height: 100vh;
   min-height: 400px;
@@ -64,9 +98,9 @@ export const Main = styled.div`
 
     h2 {
       margin-bottom: 56px;
-      font-size: 36px;
+      font-size: var(--font-large);
       font-weight: 600;
-      text-align: right;
+      line-height: 1.4;
 
       .row {
         display: block;
@@ -101,6 +135,111 @@ export const Main = styled.div`
             width: 28px;
             height: 28px;
           }
+        }
+      }
+    }
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: 25px;
+  }
+`;
+
+export const Projects = styled.div`
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px;
+
+  .title {
+    height: 60px;
+    font-size: var(--font-large);
+    font-weight: 600;
+    margin: 40px 40px 80px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 24px solid var(--light-purple);
+  }
+`;
+
+export const Project = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+
+  .thumbnail {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-image: url("/assets/project_thmb/bg_macbook.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 21px;
+      left: 34px;
+      width: 436px;
+      height: 236px;
+      border-radius: 3px;
+    }
+  }
+
+  .desc {
+    width: 550px;
+
+    .project__scale {
+      display: block;
+      margin-bottom: 5px;
+      padding: 5px 12px;
+      width: fit-content;
+      color: #fff;
+      font-weight: 600;
+      background-color: var(--deep-purple);
+      border-radius: 8px;
+    }
+
+    .project__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: var(--font-medium);
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .links {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    .summary {
+      margin: 10px 0;
+      line-height: 1.5;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .detail {
+      li {
+        line-height: 1.3;
+
+        &:before {
+          content: "•";
+          margin-right: 8px;
         }
       }
     }
