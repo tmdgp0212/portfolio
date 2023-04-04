@@ -34,7 +34,7 @@ export const Header = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: #fff;
+  /* background-color: #fff; */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   z-index: 5;
 
@@ -71,11 +71,13 @@ export const Intro = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
   position: relative;
-  width: 100vw;
+  margin: 0 auto;
+  padding: 40px;
+  width: 80vw;
   height: 100vh;
-  min-height: 400px;
+  min-height: 500px;
 
   .main__img {
     display: flex;
@@ -93,12 +95,12 @@ export const Intro = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    gap: 20px;
+    flex-grow: 1;
     cursor: default;
 
     h2 {
-      margin-bottom: 56px;
-      font-size: var(--font-large);
+      font-size: var(--font-medium);
       font-weight: 600;
       line-height: 1.4;
 
@@ -106,23 +108,73 @@ export const Intro = styled.div`
         display: block;
 
         b {
-          font-size: 40px;
           color: var(--deep-purple);
         }
       }
     }
 
-    .main__profile {
+    .profile {
+      .profile__item {
+        display: flex;
+        padding: 10px 0;
+
+        .info__title {
+          display: block;
+          width: 200px;
+          font-weight: 600;
+          flex-shrink: 0;
+        }
+
+        .info__body {
+          &.list-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+
+          .gray-box {
+            padding: 2px 8px;
+            font-size: 14px;
+            background-color: var(--light-gray);
+            border-radius: 3px;
+          }
+
+          .exp {
+            margin-bottom: 10px;
+
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .main__buttons {
       display: flex;
       justify-content: right;
       gap: 20px;
 
-      .profile__item {
+      .button__item {
+        color: #333;
         cursor: pointer;
-        transition: transform 0.2s;
+        transition: all 0.3s;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
+
+          &.phone {
+            color: #34a853;
+          }
+          &.mail {
+            color: #ea4335;
+          }
+          &.github {
+            color: #000;
+          }
+          &.velog {
+            color: #20c997;
+          }
         }
 
         a {
@@ -146,9 +198,10 @@ export const Intro = styled.div`
 `;
 
 export const Projects = styled.div`
-  max-width: var(--max-width);
-  margin: 0 auto;
+  /* max-width: var(--max-width);
+  margin: 0 auto; */
   padding: 40px;
+  background-color: var(--white-purple);
 
   .title {
     height: 60px;
@@ -161,14 +214,15 @@ export const Projects = styled.div`
   }
 `;
 
-export const Project = styled.div`
+export const ProjectLarge = styled.div`
   display: flex;
   justify-content: center;
   gap: 36px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   padding: 40px;
   width: fit-content;
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 5px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
   cursor: default;
 

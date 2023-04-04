@@ -10,8 +10,10 @@ const GlobalStyle = createGlobalStyle`
 }
 
 :root {
+	--white-purple: #FBF7FF;
 	--light-purple: #F3E7FE;
 	--deep-purple: #602ed5;
+	--light-gray: #eee;
 
 	--font-large: 36px;
 	--font-medium: 28px;

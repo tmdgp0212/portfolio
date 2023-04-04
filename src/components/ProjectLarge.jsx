@@ -2,7 +2,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { CreateBadge } from "../util/CreateBadge";
 import * as S from "../style/styleComponents";
 
-function Project({
+function ProjectLarge({
   team,
   name,
   title,
@@ -15,7 +15,7 @@ function Project({
   children,
 }) {
   return (
-    <S.Project>
+    <S.ProjectLarge>
       <div className="thumbnail">
         <img src={`/assets/project_thmb/${name}.gif`} alt={name} />
       </div>
@@ -49,8 +49,8 @@ function Project({
           </a>
         </div>
       </div>
-    </S.Project>
+    </S.ProjectLarge>
   );
 }
 
-export default Project;
+export default ProjectLarge;

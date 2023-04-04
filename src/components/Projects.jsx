@@ -1,5 +1,5 @@
 import * as S from "../style/styleComponents";
-import Project from "./Project";
+import ProjectLarge from "./ProjectLarge";
 
 function Projects() {
   return (
@@ -8,7 +8,7 @@ function Projects() {
         <h2>Projects</h2>
       </div>
       <div className="projects__large">
-        <Project
+        <ProjectLarge
           team
           name="nextfurniture"
           title="Next Furniture"
@@ -27,8 +27,8 @@ function Projects() {
           <li>로그인과, 유저토큰을 활용한 사용자 인증 기능을 구현하였습니다</li>
           <li>가구데이터를 등록하고, 수정하거나 구매할 수 있습니다</li>
           <li>메인페이지, 상세페이지, 마이페이지 구현을 담당하였습니다</li>
-        </Project>
-        <Project
+        </ProjectLarge>
+        <ProjectLarge
           name="calendar"
           title="Diary Calendar"
           worker={1}
@@ -45,7 +45,7 @@ function Projects() {
             일기는 로컬스토리지에 저장되어 동일 브라우저내에서 얼마든지 재열람이
             가능합니다
           </li>
-        </Project>
+        </ProjectLarge>
       </div>
     </S.Projects>
   );
