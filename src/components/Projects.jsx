@@ -1,11 +1,12 @@
 import * as S from "../style/styleComponents";
 import ProjectLarge from "./ProjectLarge";
+import ProjectMedium from "./ProjectMedium";
 
 function Projects() {
   return (
-    <S.Projects>
+    <S.Projects id="projects">
       <div className="title">
-        <h2>Projects</h2>
+        <h2>Works</h2>
       </div>
       <div className="projects__large">
         <ProjectLarge
@@ -15,7 +16,7 @@ function Projects() {
           worker={5}
           date={"23.01.30 ~ 23.03.03"}
           language={["html", "javascript", "SCSS"]}
-          library={"Vercel, Parcel, Swiper, Navigo"}
+          library={["Vercel", "SwiperJS", "Navigo"]}
           github={"https://github.com/tmdgp0212/KDT-M4_Team2Project_Repo"}
           site={"https://next-furniture.vercel.app/"}
         >
@@ -34,7 +35,7 @@ function Projects() {
           worker={1}
           date={" 22.09.29 ~ 22.10.05"}
           language={["react"]}
-          library={"react-router-dom, styled-component"}
+          library={["react-router-dom", "styled-component"]}
           github={"https://github.com/tmdgp0212/Diary_Calendar"}
           site={"https://tmdgp0212.github.io/Diary_Calendar"}
         >
@@ -46,6 +47,19 @@ function Projects() {
             가능합니다
           </li>
         </ProjectLarge>
+      </div>
+      <div className="projects__medium">
+        <ProjectMedium
+          name="finedust"
+          title="FineDustMap"
+          date={" 23.03.23 ~ 23.03.25"}
+          language={["react"]}
+          library={["redux", "axios", "react-router-dom", "styled-component"]}
+          github={"https://github.com/tmdgp0212/FineDustMap"}
+          site={"https://whimsical-sfogliatella-62bbe0.netlify.app/"}
+        >
+          <p>공공API를 활용한 미세먼지 정보 페이지입니다</p>
+        </ProjectMedium>
       </div>
     </S.Projects>
   );

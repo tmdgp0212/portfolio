@@ -10,7 +10,7 @@ import { CreateBadge } from "../util/CreateBadge";
 
 function Intro() {
   return (
-    <S.Intro>
+    <S.Intro id="intro">
       <div className="main__img">
         <img src="/assets/me2.png" alt="me" />
       </div>
@@ -102,7 +102,9 @@ function Intro() {
           </div>
         </div>
       </div>
-      <div className="scroll">아래로 스크롤</div>
+      <div className="scroll">
+        <img src="/assets/double-down.gif" alt="scroll down" />
+      </div>
     </S.Intro>
   );
 }

@@ -2,12 +2,10 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { CreateBadge } from "../util/CreateBadge";
 import * as S from "../style/styleComponents";
 
-function ProjectLarge({
+function ProjectMedium({
   team,
   name,
   title,
-  worker,
-  date,
   language,
   library,
   github,
@@ -15,28 +13,20 @@ function ProjectLarge({
   children,
 }) {
   return (
-    <S.ProjectLarge>
+    <S.ProjectMedium>
       <div className="thumbnail">
-        <img src={`/assets/project_thmb/${name}.gif`} alt={name} />
+        <img src={`/assets/project_thmb/${name}.png`} alt={name} />
       </div>
       <div className="desc">
-        <span className="project__scale">
-          {team ? "Team Project" : "Personal Project"}
-        </span>
-
         <h3>{title}</h3>
-
+        <ul className="detail">{children}</ul>
         <ul className="summary">
-          <li>작업인원: {worker}인</li>
-          <li>작업기간: {date}</li>
-          <li>
-            사용언어:{" "}
+          <li className="language">
             {language.map((lan, idx) => (
               <CreateBadge key={idx} lan={lan} />
             ))}
           </li>
-          <li>
-            라이브러리:{" "}
+          <li className="library">
             {library.map((lib, idx) => (
               <span key={idx} className="gray-box">
                 {lib}
@@ -44,7 +34,6 @@ function ProjectLarge({
             ))}
           </li>
         </ul>
-        <ul className="detail">{children}</ul>
         <div className="links">
           <a target="_blank" href={github}>
             Github
@@ -56,8 +45,8 @@ function ProjectLarge({
           </a>
         </div>
       </div>
-    </S.ProjectLarge>
+    </S.ProjectMedium>
   );
 }
 
-export default ProjectLarge;
+export default ProjectMedium;
