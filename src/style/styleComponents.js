@@ -96,6 +96,7 @@ export const Intro = styled.div`
   .main__img {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     width: 400px;
     height: 400px;
 
@@ -231,15 +232,23 @@ export const Projects = styled.div`
     border-bottom: 24px solid var(--light-purple);
   }
 
-  .projects__large {
+  > h3 {
+    font-size: var(--font-large);
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .projects__team {
     max-width: var(--max-width);
     margin: 0 auto;
   }
 
-  .projects__medium {
+  .projects__personal {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
+    gap: 40px;
+    margin: 0 auto 60px;
     padding: 0 40px;
     width: 100%;
     max-width: var(--max-width);
@@ -363,10 +372,13 @@ export const ProjectLarge = styled.div`
 
 export const ProjectMedium = styled(ProjectLarge)`
   flex-direction: column;
+  justify-content: stretch;
   gap: 5px;
+  margin: initial;
   padding: 10px;
 
   .thumbnail {
+    position: initial;
     width: initial;
     height: initial;
     background: none;
@@ -374,30 +386,59 @@ export const ProjectMedium = styled(ProjectLarge)`
     img {
       position: initial;
       width: 100%;
-      height: initial;
+      height: 175px;
+      object-fit: cover;
     }
   }
 
   .desc {
     width: initial;
 
-    h3 {
-      font-size: 24px;
-      line-height: 1.4;
+    .title__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+
+      h3 {
+        font-size: 24px;
+        line-height: 1.4;
+      }
+
+      .link {
+        display: flex;
+        gap: 10px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          transition: transform 0.1s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
   }
 
   .summary {
+    margin-top: 0px !important;
+
     .language {
       margin-bottom: 10px;
     }
   }
 
-  .links {
-    justify-content: center;
+  .detail {
+    li {
+      line-height: 1.3;
 
-    a {
-      width: 100%;
+      &:before {
+        display: none;
+      }
     }
   }
 `;

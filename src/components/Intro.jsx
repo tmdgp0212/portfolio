@@ -36,13 +36,14 @@ function Intro() {
             <span className="info__title">🛠️Library & Framework</span>
             <div className="info__body list-container">
               {[
-                "jQuery",
                 "React",
+                "jQuery",
                 "TypeScript",
                 "Next.js",
                 "redux",
                 "axios",
                 "react-query",
+                "framer-motion",
                 "styled-components",
                 "Scss",
               ].map((lang, idx) => (

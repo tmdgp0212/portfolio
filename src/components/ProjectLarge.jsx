@@ -1,4 +1,5 @@
-import { BsArrowUpRight } from "react-icons/bs";
+import { FiExternalLink } from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
 import { CreateBadge } from "../util/CreateBadge";
 import * as S from "../style/styleComponents";
 
@@ -46,13 +47,13 @@ function ProjectLarge({
         </ul>
         <ul className="detail">{children}</ul>
         <div className="links">
-          <a target="_blank" href={github}>
-            Github
-            <BsArrowUpRight />
-          </a>
           <a target="_blank" href={site}>
             Site
-            <BsArrowUpRight />
+            <FiExternalLink />
+          </a>
+          <a target="_blank" href={github}>
+            Github
+            <BsGithub />
           </a>
         </div>
       </div>
