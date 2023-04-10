@@ -6,11 +6,20 @@ import {
 } from "react-icons/bs";
 import { copyText } from "../util/copyText";
 import * as S from "../style/styleComponents";
-import { CreateBadge } from "../util/CreateBadge";
+import { useDispatch } from "react-redux";
+import { useEffect, useRef } from "react";
+import { regRef } from "../modules/refs";
 
 function Intro() {
+  const dispatch = useDispatch();
+  const introEl = useRef();
+
+  useEffect(() => {
+    dispatch(regRef({ name: "introEl", ref: introEl }));
+  }, [introEl]);
+
   return (
-    <S.Intro id="intro">
+    <S.Intro ref={introEl} id="intro">
       <div className="main__img">
         <img src="/assets/me2.png" alt="me" />
       </div>

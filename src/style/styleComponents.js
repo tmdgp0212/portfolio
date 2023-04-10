@@ -91,7 +91,7 @@ export const Intro = styled.div`
   padding: 40px;
   width: 80vw;
   height: 100vh;
-  min-height: 500px;
+  min-height: 550px;
 
   .main__img {
     display: flex;

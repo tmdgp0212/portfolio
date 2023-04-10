@@ -1,10 +1,20 @@
+import { useEffect, useRef } from "react";
 import * as S from "../style/styleComponents";
 import ProjectLarge from "./ProjectLarge";
 import ProjectMedium from "./ProjectMedium";
+import { useDispatch } from "react-redux";
+import { regRef } from "../modules/refs";
 
 function Projects() {
+  const dispatch = useDispatch();
+  const projectEl = useRef();
+
+  useEffect(() => {
+    dispatch(regRef({ name: "projectEl", ref: projectEl }));
+  }, [projectEl]);
+
   return (
-    <S.Projects id="projects">
+    <S.Projects ref={projectEl} id="projects">
       <div className="title">
         <h2>Works</h2>
       </div>
