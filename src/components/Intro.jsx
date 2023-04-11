@@ -4,7 +4,6 @@ import {
   BsGithub,
   BsVimeo,
 } from "react-icons/bs";
-import { copyText } from "../util/copyText";
 import * as S from "../style/styleComponents";
 import Header from "./Header";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -15,10 +14,22 @@ import { pageContext } from "../App";
 function Intro() {
   const navigate = useNavigate();
   const location = useLocation();
+  const copyRef = useRef();
   const { setPage } = useContext(pageContext);
 
+  const copy = (text, name) => {
+    window.navigator.clipboard.writeText(text);
+
+    copyRef.current.textContent = `${name}가 복사되었습니다`;
+    copyRef.current.style.display = "flex";
+
+    setTimeout(() => {
+      copyRef.current.style.display = "none";
+    }, 1500);
+  };
+
   const handleScroll = throttle(() => {
-    if (window.scrollY > window.innerHeight * 0.02) {
+    if (window.scrollY > 5) {
       navigate("/works");
     }
   }, 300);
@@ -112,7 +123,7 @@ function Intro() {
             <div className="main__buttons">
               <div
                 className="button__item phone"
-                onClick={() => copyText("전화번호", "01053903029")}
+                onClick={() => copy("01053903029", "전화번호")}
               >
                 <a>
                   <BsTelephoneFill />
@@ -120,7 +131,7 @@ function Intro() {
               </div>
               <div
                 className="button__item mail"
-                onClick={() => copyText("메일주소", "tmdgp0212@naver.com")}
+                onClick={() => copy("tmdgp0212@naver.com", "메일주소")}
               >
                 <a>
                   <BsEnvelopeAt />
@@ -142,7 +153,10 @@ function Intro() {
             <img src="/assets/double-down.gif" alt="scroll down" />
           </div>
         </div>
-        <div className="bottom"></div>
+
+        <div className="copy" ref={copyRef}>
+          복사되었습니다
+        </div>
       </S.Intro>
     </>
   );

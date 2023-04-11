@@ -38,7 +38,33 @@ function Contact() {
         exit={{ y: -window.innerHeight }}
         transition={{ type: "tween", duration: 0.3 }}
       >
-        Contact
+        <div className="card">
+          <div className="link tel">
+            <h3>Tel.</h3>
+            <p>010.5390.3029</p>
+          </div>
+          <div className="link email">
+            <h3>Email.</h3>
+            <p>tmdgp0212@naver.com</p>
+          </div>
+          <div className="link github">
+            <h3>Github.</h3>
+            <p>
+              <a href="https://github.com/tmdgp0212" target="_blink">
+                https://github.com/tmdgp0212
+              </a>
+            </p>
+          </div>
+          <div className="link velog">
+            <h3>Velog.</h3>
+            <p>
+              <a href="https://velog.io/@tmdgp0212" target="_blink">
+                https://velog.io/@tmdgp0212
+              </a>
+            </p>
+          </div>
+        </div>
+        <h2>CONTACT ME.</h2>
       </S.Contact>
     </>
   );

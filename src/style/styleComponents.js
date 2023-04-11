@@ -10,6 +10,25 @@ const spin = keyframes`
   }
 `;
 
+const faceInOut = keyframes`
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+    }
+`;
+
 export const Loading = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,15 +74,16 @@ export const Header = styled.div`
       font-weight: 600;
       line-height: 1;
 
-      img {
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin-right: 5px;
-      }
+      a {
+        display: flex;
+        align-items: center;
 
-      span {
-        font-size: 32px;
+        img {
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin-right: 5px;
+        }
       }
     }
 
@@ -95,7 +115,7 @@ export const Intro = styled(motion.div)`
     margin: 0 auto;
     padding: 40px;
     width: 80vw;
-    height: 100vh;
+    height: 101vh;
     min-height: 550px;
 
     .main__img {
@@ -226,9 +246,22 @@ export const Intro = styled(motion.div)`
     margin: auto;
   }
 
-  .bottom {
-    width: 100vw;
-    height: 2vh;
+  .copy {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: ${faceInOut} 1.5s;
   }
 `;
 
@@ -460,7 +493,30 @@ export const ProjectMedium = styled(ProjectLarge)`
 
 export const Contact = styled(motion.div)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 102vh;
+  line-height: 2;
+  cursor: default;
+
+  .card {
+    padding: 40px 80px;
+    color: #fff;
+    background-color: var(--deep-purple);
+
+    .link {
+      display: flex;
+      font-size: 20px;
+
+      h3 {
+        width: 80px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: var(--font-large);
+    font-weight: 600;
+  }
 `;

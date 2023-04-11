@@ -92,7 +92,7 @@ function Projects() {
             name="calendar"
             title="Diary Calendar"
             language={["react"]}
-            library={["react-router-dom", "styled-component", "react-icons"]}
+            library={["redux", "react-router-dom", "styled-component"]}
             github={"https://github.com/tmdgp0212/Diary_Calendar"}
             site={"https://tmdgp0212.github.io/Diary_Calendar"}
           >
@@ -105,13 +105,7 @@ function Projects() {
             name="finedust"
             title="FineDustMap"
             language={["react"]}
-            library={[
-              "redux",
-              "axios",
-              "react-router-dom",
-              "styled-component",
-              "react-icons",
-            ]}
+            library={["redux", "axios", "react-router-dom", "styled-component"]}
             github={"https://github.com/tmdgp0212/FineDustMap"}
             site={"https://whimsical-sfogliatella-62bbe0.netlify.app/"}
           >
@@ -122,12 +116,7 @@ function Projects() {
             name="musicplayer"
             title="Music Player"
             language={["react"]}
-            library={[
-              "redux",
-              "styled-component",
-              "framer-motion",
-              "react-icons",
-            ]}
+            library={["redux", "styled-component", "framer-motion"]}
             github={"https://github.com/tmdgp0212/30projects"}
             site={"https://peppy-eclair-b38986.netlify.app/"}
           >
@@ -217,7 +206,7 @@ function Projects() {
             github={"https://github.com/tmdgp0212/Kakao-corp"}
             site={"https://tmdgp0212.github.io/Kakao-corp/"}
           >
-            <li>스크롤에 따라 다양하게 반응하는 동적 웹 구현</li>
+            <li>스크롤에 따라 반응하는 동적 웹 구현</li>
             <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
           </ProjectMedium>
           <ProjectMedium
@@ -232,14 +221,15 @@ function Projects() {
             <li>다양한 슬라이드 구현</li>
           </ProjectMedium>
           <ProjectMedium
-            name="artbox"
-            title="Artbox Mall"
+            name="freewill"
+            title="FREEWILL"
             language={["javascript"]}
-            library={["Scss"]}
-            github={"https://github.com/tmdgp0212/artbox"}
-            site={"https://unique-twilight-e140b7.netlify.app/"}
+            library={["jQuery", "Scss", "wow.js"]}
+            github={"https://github.com/tmdgp0212/FREEWILL"}
+            site={"https://tmdgp0212.github.io/FREEWILL/"}
           >
-            <li>다양한 슬라이드 이벤트 구현</li>
+            <li>플러그인을 활용한 스크롤 이벤트 구현</li>
+            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
           </ProjectMedium>
         </div>
       </S.Projects>

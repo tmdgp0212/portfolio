@@ -8,8 +8,10 @@ function Header() {
     <S.Header shadow={location.pathname === "/works"}>
       <div className="container">
         <h1>
-          <img src="/assets/logo.png" alt="logo" />
-          SeungHye Portfolio
+          <a href="/">
+            <img src="/assets/logo.png" alt="logo" />
+            SeungHye Portfolio
+          </a>
         </h1>
         <nav>
           <NavLink
