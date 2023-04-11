@@ -1,28 +1,27 @@
 import { lazy, Suspense } from "react";
-import Loading from "./components/Loading";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./style/globalStyle";
+import Loading from "./components/Loading";
 import Contact from "./components/Contact";
-import CommonFn from "./components/CommonFn";
-import { Provider } from "react-redux";
-import store from "./modules/store";
+import Projects from "./components/Projects";
+import { AnimatePresence } from "framer-motion";
 
-const Header = lazy(() => import("./components/Header"));
 const Intro = lazy(() => import("./components/Intro"));
-const Projects = lazy(() => import("./components/Projects"));
 
 function App() {
   return (
-    <Suspense fallback={<Loading />}>
+    <BrowserRouter>
       <GlobalStyle />
-      <Provider store={store}>
-        <CommonFn>
-          <Header />
-          <Intro />
-          <Projects />
-          <Contact />
-        </CommonFn>
-      </Provider>
-    </Suspense>
+      <AnimatePresence>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/works" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
+      </AnimatePresence>
+    </BrowserRouter>
   );
 }
 

@@ -1,18 +1,39 @@
-import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import * as S from "../style/styleComponents";
-import { useEffect, useRef } from "react";
-import { regRef } from "../modules/refs";
+import Header from "./Header";
+import { useEffect } from "react";
+import { throttle } from "lodash";
 
 function Contact() {
-  const dispatch = useDispatch();
-  const contactEl = useRef();
+  const navigate = useNavigate();
+
+  const handleScroll = throttle(() => {
+    console.log(window.scrollY);
+    if (window.scrollY < 5) {
+      navigate("/works");
+    }
+  }, 300);
 
   useEffect(() => {
-    dispatch(regRef({ name: "contactEl", ref: contactEl }));
-  }, [contactEl]);
+    window.scrollTo(0, 10);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <S.Contact ref={contactEl} id="contact">
+    <S.Contact
+      initial={{ y: window.innerHeight }}
+      animate={{ y: 0 }}
+      exit={{ y: -window.innerHeight }}
+      transition={{ type: "tween", duration: 0.3 }}
+    >
+      <Header />
       Contact
     </S.Contact>
   );
