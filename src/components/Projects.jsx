@@ -1,13 +1,25 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import * as S from "../style/styleComponents";
 import Header from "./Header";
 import ProjectLarge from "./ProjectLarge";
 import ProjectMedium from "./ProjectMedium";
 import { throttle } from "lodash";
 import { useNavigate } from "react-router-dom";
+import { pageContext } from "../App";
 
 function Projects() {
   const navigate = useNavigate();
+  const { page } = useContext(pageContext);
+
+  const fromIntro = {
+    hidden: { y: window.innerHeight },
+    visible: { y: 0 },
+  };
+
+  const fromContact = {
+    hidden: { y: -window.innerHeight, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
 
   const handleScroll = throttle(() => {
     if (window.scrollY < 5) {
@@ -20,10 +32,12 @@ function Projects() {
   }, 300);
 
   useEffect(() => {
-    window.scrollTo(0, 15);
-  }, []);
+    if (page === "/") {
+      window.scrollTo(0, 15);
+    } else {
+      window.scrollTo(0, document.body.offsetHeight - window.innerHeight - 5);
+    }
 
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -35,9 +49,9 @@ function Projects() {
     <>
       <Header />
       <S.Projects
-        initial={{ y: window.innerHeight }}
-        animate={{ y: 0 }}
-        exit={{ y: -window.innerHeight }}
+        initial="hidden"
+        animate="visible"
+        variants={page === "/" ? fromIntro : fromContact}
         transition={{ type: "tween", duration: 0.3 }}
       >
         <div className="title">

@@ -7,12 +7,15 @@ import {
 import { copyText } from "../util/copyText";
 import * as S from "../style/styleComponents";
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useRef } from "react";
 import { throttle } from "lodash";
+import { pageContext } from "../App";
 
 function Intro() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { setPage } = useContext(pageContext);
 
   const handleScroll = throttle(() => {
     if (window.scrollY > window.innerHeight * 0.02) {
@@ -22,6 +25,7 @@ function Intro() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setPage(location.pathname);
   }, []);
 
   useEffect(() => {

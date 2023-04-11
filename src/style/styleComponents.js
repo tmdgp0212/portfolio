@@ -36,6 +36,7 @@ export const Header = styled.div`
   left: 0;
   width: 100vw;
   background-color: #fff;
+  box-shadow: ${({ shadow }) => shadow && "0 0 10px rgba(0,0,0,0.1)"};
   z-index: 5;
 
   .container {
@@ -232,26 +233,25 @@ export const Intro = styled(motion.div)`
 `;
 
 export const Projects = styled(motion.div)`
-  /* max-width: var(--max-width);
-  margin: 0 auto; */
-  padding: 40px;
+  padding: 40px 60px;
   background-color: var(--white-purple);
 
   .title {
     height: 60px;
     font-size: var(--font-large);
     font-weight: 600;
-    margin: 40px 40px 80px;
+    margin: 80px 40px;
     padding: 10px;
     text-align: center;
     border-bottom: 24px solid var(--light-purple);
   }
 
   > h3 {
+    margin-bottom: 18px;
+    padding: 20px;
     font-size: var(--font-large);
     font-weight: 600;
     text-align: center;
-    padding: 20px;
   }
 
   .projects__team {

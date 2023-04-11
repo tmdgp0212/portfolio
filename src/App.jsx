@@ -1,25 +1,28 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { createContext, lazy, Suspense, useState } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import GlobalStyle from "./style/globalStyle";
 import Loading from "./components/Loading";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import { AnimatePresence } from "framer-motion";
+import Intro from "./components/Intro";
 
-const Intro = lazy(() => import("./components/Intro"));
+export const pageContext = createContext();
 
 function App() {
+  const [page, setPage] = useState("/");
+
   return (
     <BrowserRouter>
-      <GlobalStyle />
       <AnimatePresence>
-        <Suspense fallback={<Loading />}>
+        <pageContext.Provider value={{ page, setPage }}>
+          <GlobalStyle />
           <Routes>
             <Route path="/" element={<Intro />} />
             <Route path="/works" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </Suspense>
+        </pageContext.Provider>
       </AnimatePresence>
     </BrowserRouter>
   );

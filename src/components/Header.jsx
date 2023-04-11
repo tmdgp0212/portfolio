@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import * as S from "../style/styleComponents";
 
 function Header() {
+  const location = useLocation();
+
   return (
-    <S.Header id="header">
+    <S.Header shadow={location.pathname === "/works"}>
       <div className="container">
         <h1>
           <img src="/assets/logo.png" alt="logo" />
