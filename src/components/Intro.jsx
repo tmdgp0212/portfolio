@@ -29,7 +29,7 @@ function Intro() {
   };
 
   const handleScroll = throttle(() => {
-    if (window.scrollY > 5) {
+    if (window.scrollY > document.body.offsetHeight - window.innerHeight - 5) {
       navigate("/works");
     }
   }, 300);

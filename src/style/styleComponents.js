@@ -84,6 +84,12 @@ export const Header = styled.div`
           height: 40px;
           margin-right: 5px;
         }
+
+        span {
+          @media (max-width: 640px) {
+            display: none;
+          }
+        }
       }
     }
 
@@ -113,10 +119,24 @@ export const Intro = styled(motion.div)`
     gap: 40px;
     position: relative;
     margin: 0 auto;
-    padding: 40px;
+    padding: 70px 40px 40px;
     width: 80vw;
     height: 101vh;
     min-height: 550px;
+
+    @media (max-width: 1400px) {
+      width: 90vw;
+    }
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+      gap: 20px;
+      width: 100vw;
+    }
+
+    @media (max-width: 640px) {
+      height: initial;
+    }
 
     .main__img {
       display: flex;
@@ -125,9 +145,32 @@ export const Intro = styled(motion.div)`
       width: 400px;
       height: 400px;
 
+      @media (max-width: 1200px) {
+        width: 340px;
+      }
+
+      @media (max-width: 960px) {
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        height: 200px;
+      }
+
+      @media (max-width: 640px) {
+        justify-content: center;
+      }
+
       img {
         display: block;
         width: 100%;
+
+        @media (max-width: 960px) {
+          width: 30%;
+        }
+
+        @media (max-width: 640px) {
+          width: 50%;
+        }
       }
     }
 
@@ -144,8 +187,21 @@ export const Intro = styled(motion.div)`
         font-weight: 600;
         line-height: 1.4;
 
+        @media (max-width: 640px) {
+          font-size: 20px;
+          text-align: center;
+        }
+
         .row {
           display: block;
+
+          @media (max-width: 960px) {
+            display: inline;
+          }
+
+          @media (max-width: 640px) {
+            display: block;
+          }
 
           b {
             color: var(--deep-purple);

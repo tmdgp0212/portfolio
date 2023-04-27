@@ -10,7 +10,7 @@ function Header() {
         <h1>
           <a href="/">
             <img src="/assets/logo.png" alt="logo" />
-            SeungHye Portfolio
+            <span>SeungHye Portfolio</span>
           </a>
         </h1>
         <nav>

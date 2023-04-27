@@ -35,7 +35,7 @@ function Projects() {
     if (page === "/") {
       window.scrollTo(0, 15);
     } else {
-      window.scrollTo(0, document.body.offsetHeight - window.innerHeight - 5);
+      window.scrollTo(0, document.body.offsetHeight - window.innerHeight - 25);
     }
 
     window.addEventListener("scroll", handleScroll);
