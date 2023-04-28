@@ -28,7 +28,7 @@ function ProjectLarge({
         <h3>{title}</h3>
 
         <ul className="summary">
-          <li>작업인원: {worker}인</li>
+          <li>작업인원: {worker}</li>
           <li>작업기간: {date}</li>
           <li>
             사용언어:{" "}
@@ -45,7 +45,7 @@ function ProjectLarge({
             ))}
           </li>
         </ul>
-        <ul className="detail">{children}</ul>
+        <div className="detail">{children}</div>
         <div className="links">
           <a target="_blank" href={site}>
             Site

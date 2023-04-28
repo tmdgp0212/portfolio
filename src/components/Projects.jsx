@@ -63,25 +63,81 @@ function Projects() {
         <div className="projects__team">
           <ProjectLarge
             team
+            name="moodlog"
+            title="Moodlog"
+            worker={"4인(FE)"}
+            date={"23.04.14 ~ 23.04.28"}
+            language={["React", "Typescript"]}
+            library={[
+              "Axios",
+              "React-query",
+              "Zustand",
+              "React-router-dom",
+              "Express",
+              "typeorm",
+              "AWS",
+            ]}
+            github={"https://github.com/REACT-2/Moodlog-FE-WEB"}
+            site={
+              "http://moodlog-env-fe.eba-a73kg2hr.ap-northeast-2.elasticbeanstalk.com/"
+            }
+          >
+            <p>프로젝트 소개</p>
+            <ul>
+              <li>SNS기반의 그림일기장 앱 입니다</li>
+              <li>
+                Node.js기반의 Express를 활용하여 RESTful API를 구현하였습니다
+              </li>
+              <li>
+                서버에서 구현한 API를 기반으로 SNS기반의 그림일기장을
+                구현하였습니다
+              </li>
+              <li>
+                AWS서비스를 사용해 데이터를 저장하고, 프로젝트를 배포하였습니다
+              </li>
+              <li>JWT방식의 유저인증을 구현하였습니다</li>
+            </ul>
+            <p>상세 역할</p>
+            <ul>
+              <li>(Backend)유저테이블 관련한 모든 기능 설계 및 구현</li>
+              <li>
+                (Frontend)프로젝트에서 사용 될 전체 api를 axios로 연동, 정리하여
+                팀원들에게 배포
+              </li>
+              <li>
+                (Frontend)포스트 상세보기, 댓글 작성 페이지 및 검색 페이지 구현
+              </li>
+            </ul>
+          </ProjectLarge>
+          <ProjectLarge
+            team
             name="nextfurniture"
             title="Next Furniture"
-            worker={5}
+            worker={"5인(FE)"}
             date={"23.01.30 ~ 23.03.03"}
             language={["javascript"]}
             library={["Vercel", "SwiperJS", "Navigo", "Scss"]}
             github={"https://github.com/tmdgp0212/KDT-M4_Team2Project_Repo"}
             site={"https://next-furniture.vercel.app/"}
           >
-            <li>프론트엔드 개발자 5명이 함께한 가구쇼핑몰 입니다</li>
-            <li>
-              순수자바스크립트 문법과 API통신에 대한 역량향상 목적으로
-              진행되었습니다
-            </li>
-            <li>
-              로그인과, 유저토큰을 활용한 사용자 인증 기능을 구현하였습니다
-            </li>
-            <li>가구데이터를 등록하고, 수정하거나 구매할 수 있습니다</li>
-            <li>메인페이지, 상세페이지, 마이페이지 구현을 담당하였습니다</li>
+            <p>프로젝트 소개</p>
+            <ul>
+              <li>프론트엔드 개발자 5명이 함께한 가구쇼핑몰 입니다</li>
+              <li>
+                순수자바스크립트 문법과 API통신에 대한 역량향상 목적으로
+                진행되었습니다
+              </li>
+              <li>
+                로그인과, 유저토큰을 활용한 사용자 인증 기능을 구현하였습니다
+              </li>
+              <li>가구데이터를 등록하고, 수정하거나 구매할 수 있습니다</li>
+            </ul>
+            <p>상세 역할</p>
+            <ul>
+              <li>페이지의 전체적인 레이아웃/디자인 컨벤션 작성</li>
+              <li>메인페이지, 카테고리 별 페이지, 검색 페이지 전체 구현</li>
+              <li>마이페이지의 유저 정보 수정페이지 구현</li>
+            </ul>
           </ProjectLarge>
         </div>
 
@@ -181,55 +237,6 @@ function Projects() {
               가위바위보의 로직을 짜면서 컴퓨터의 시선에서 사고하고 계산하는
               법을 익혔습니다
             </li>
-          </ProjectMedium>
-        </div>
-
-        <h3>Clone Projects</h3>
-
-        <div className="projects__personal">
-          <ProjectMedium
-            name="netflix"
-            title="Netflix"
-            language={["react"]}
-            library={["framer-motion", "react-router-dom", "styled-components"]}
-            github={"https://github.com/tmdgp0212/netflix"}
-            site={"https://tmdgp0212.github.io/netflix/"}
-          >
-            <li>framer-motion으로 인터렉션 모션 구현</li>
-            <li>api를 활용하여 영화 검색이 가능합니다</li>
-          </ProjectMedium>
-          <ProjectMedium
-            name="kakao"
-            title="Kakao Corp"
-            language={["javascript"]}
-            library={["jQuery"]}
-            github={"https://github.com/tmdgp0212/Kakao-corp"}
-            site={"https://tmdgp0212.github.io/Kakao-corp/"}
-          >
-            <li>스크롤에 따라 반응하는 동적 웹 구현</li>
-            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
-          </ProjectMedium>
-          <ProjectMedium
-            name="sandoll"
-            title="Sandoll-cloud"
-            language={["javascript"]}
-            library={["Scss"]}
-            github={"https://github.com/tmdgp0212/Sandoll-cloud"}
-            site={"https://tmdgp0212.github.io/Sandoll-cloud/"}
-          >
-            <li>드롭다운 메뉴와 모달창(검색창) 구현</li>
-            <li>다양한 슬라이드 구현</li>
-          </ProjectMedium>
-          <ProjectMedium
-            name="freewill"
-            title="FREEWILL"
-            language={["javascript"]}
-            library={["jQuery", "Scss", "wow.js"]}
-            github={"https://github.com/tmdgp0212/FREEWILL"}
-            site={"https://tmdgp0212.github.io/FREEWILL/"}
-          >
-            <li>플러그인을 활용한 스크롤 이벤트 구현</li>
-            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
           </ProjectMedium>
         </div>
       </S.Projects>

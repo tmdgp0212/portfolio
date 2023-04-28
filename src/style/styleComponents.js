@@ -385,8 +385,8 @@ export const ProjectLarge = styled.div`
       position: absolute;
       top: 21px;
       left: 34px;
-      width: 436px;
-      height: 236px;
+      width: 438px;
+      height: 240px;
       border-radius: 3px;
     }
   }
@@ -436,12 +436,19 @@ export const ProjectLarge = styled.div`
     }
 
     .detail {
-      li {
-        line-height: 1.3;
+      p {
+        font-weight: 600;
+        line-height: 2;
+      }
 
-        &:before {
-          content: "•";
-          margin-right: 8px;
+      ul {
+        li {
+          line-height: 1.3;
+
+          &:before {
+            content: "•";
+            margin-right: 8px;
+          }
         }
       }
     }
