@@ -67,13 +67,12 @@ function Projects() {
             title="Moodlog"
             worker={"4인(FE)"}
             date={"23.04.14 ~ 23.04.28"}
-            language={["React", "Typescript"]}
+            language={["React", "Typescript", "Node.js", "Express"]}
             library={[
               "Axios",
               "React-query",
               "Zustand",
               "React-router-dom",
-              "Express",
               "typeorm",
               "AWS",
             ]}
@@ -99,13 +98,13 @@ function Projects() {
             </ul>
             <p>상세 역할</p>
             <ul>
-              <li>(Backend)유저테이블 관련한 모든 기능 설계 및 구현</li>
+              <li>유저테이블 관련한 모든 백엔드 기능 설계 및 구현</li>
               <li>
-                (Frontend)프로젝트에서 사용 될 전체 api를 axios로 연동, 정리하여
+                프로젝트에서 사용 될 전체 api를 axios로 연동, 정리하여
                 팀원들에게 배포
               </li>
               <li>
-                (Frontend)포스트 상세보기, 댓글 작성 페이지 및 검색 페이지 구현
+                포스트 상세보기, 댓글 작성 페이지 및 유저 검색 페이지 구현
               </li>
             </ul>
           </ProjectLarge>

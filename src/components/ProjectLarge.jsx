@@ -31,7 +31,7 @@ function ProjectLarge({
           <li>작업인원: {worker}</li>
           <li>작업기간: {date}</li>
           <li>
-            사용언어:{" "}
+            사용기술:{" "}
             {language.map((lan, idx) => (
               <CreateBadge key={idx} lan={lan} />
             ))}

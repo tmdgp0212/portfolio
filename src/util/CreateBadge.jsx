@@ -30,6 +30,14 @@ export const CreateBadge = ({ lan }) => {
       name = "React";
       color = "61DAFB";
       break;
+    case "node.js":
+      name = "node.js";
+      color = "339933";
+      break;
+    case "express":
+      name = "express";
+      color = "000000";
+      break;
   }
 
   return (
