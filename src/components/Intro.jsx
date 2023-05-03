@@ -71,11 +71,13 @@ function Intro() {
               <div className="profile__item">
                 <span className="info__title">📖Language</span>
                 <div className="info__body list-container">
-                  {["HTML", "CSS", "JavaScript"].map((lang, idx) => (
-                    <span className="gray-box" key={idx}>
-                      {lang}
-                    </span>
-                  ))}
+                  {["HTML", "CSS", "JavaScript", "TypeScript"].map(
+                    (lang, idx) => (
+                      <span className="gray-box" key={idx}>
+                        {lang}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
               <div className="profile__item">
@@ -84,7 +86,6 @@ function Intro() {
                   {[
                     "React",
                     "jQuery",
-                    "TypeScript",
                     "Next.js",
                     "redux",
                     "axios",

@@ -104,6 +104,10 @@ function Projects() {
                 팀원들에게 배포
               </li>
               <li>
+                axios에 인터셉터를 설정하여 api요청 전 쿠키에 담아 둔 Access
+                Token 정보를 헤더에 담아 전송
+              </li>
+              <li>
                 포스트 상세보기, 댓글 작성 페이지 및 유저 검색 페이지 구현
               </li>
             </ul>
