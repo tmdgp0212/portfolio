@@ -71,7 +71,6 @@ function Projects() {
             library={[
               "Axios",
               "React-query",
-              "Zustand",
               "React-router-dom",
               "typeorm",
               "AWS",
@@ -240,6 +239,55 @@ function Projects() {
               가위바위보의 로직을 짜면서 컴퓨터의 시선에서 사고하고 계산하는
               법을 익혔습니다
             </li>
+          </ProjectMedium>
+        </div>
+        <h3>Clone Projects</h3>
+
+        <div className="projects__personal">
+          <ProjectMedium
+            name="netflix"
+            title="Netflix"
+            language={["react"]}
+            library={["framer-motion", "react-router-dom", "styled-components"]}
+            github={"https://github.com/tmdgp0212/netflix"}
+            site={"https://tmdgp0212.github.io/netflix/"}
+          >
+            <li>framer-motion으로 인터렉션 모션 구현</li>
+            <li>api를 활용하여 영화 검색이 가능합니다</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="kakao"
+            title="Kakao Corp"
+            language={["javascript"]}
+            library={["jQuery"]}
+            github={"https://github.com/tmdgp0212/Kakao-corp"}
+            site={"https://tmdgp0212.github.io/Kakao-corp/"}
+          >
+            <li>스크롤에 따라 다양하게 반응하는 동적 웹 구현</li>
+            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="sandoll"
+            title="Sandoll-cloud"
+            language={["javascript"]}
+            library={["Scss"]}
+            github={"https://github.com/tmdgp0212/Sandoll-cloud"}
+            site={"https://tmdgp0212.github.io/Sandoll-cloud/"}
+          >
+            <li>드롭다운 메뉴와 모달창(검색창) 구현</li>
+            <li>다양한 슬라이드 구현</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="freewill"
+            title="FREEWILL"
+            language={["javascript", "jQuery"]}
+            library={["Scss"]}
+            github={"https://github.com/tmdgp0212/FREEWILL"}
+            site={"https://tmdgp0212.github.io/FREEWILL/"}
+          >
+            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
+            <li>스크롤에 따라 요소가 fade되는 이벤트 구현</li>
+            <li>keyframe을 활용한 팝업 애니메이션 구현</li>
           </ProjectMedium>
         </div>
       </S.Projects>
