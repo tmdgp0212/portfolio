@@ -55,14 +55,6 @@ function Contact() {
               </a>
             </p>
           </div>
-          <div className="link velog">
-            <h3>Velog.</h3>
-            <p>
-              <a href="https://velog.io/@tmdgp0212" target="_blink">
-                https://velog.io/@tmdgp0212
-              </a>
-            </p>
-          </div>
         </div>
         <h2>CONTACT ME.</h2>
       </S.Contact>

@@ -322,7 +322,7 @@ export const Intro = styled(motion.div)`
 `;
 
 export const Projects = styled(motion.div)`
-  padding: 40px 60px;
+  padding: 100px 60px;
   background-color: var(--white-purple);
 
   .title {
