@@ -181,6 +181,55 @@ function Projects() {
             </ul>
           </ProjectLarge>
         </div>
+
+        <h3>etc...</h3>
+
+        <div className="projects__personal">
+          <ProjectMedium
+            name="musicplayer"
+            title="Music Player"
+            language={["react"]}
+            library={["redux", "styled-component", "framer-motion"]}
+            github={"https://github.com/tmdgp0212/30projects"}
+            site={"https://peppy-eclair-b38986.netlify.app/"}
+          >
+            <li>Audio API를 활용한 뮤직플레이어앱</li>
+            <li>Redux를 활용하여 데이터를 관리하였습니다</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="drowingboard"
+            title="Lets Draw!"
+            language={["javascript"]}
+            library={["Scss"]}
+            github={"https://github.com/tmdgp0212/30projects"}
+            site={"https://tranquil-semifreddo-5b67db.netlify.app/"}
+          >
+            <li>canvas API를 활용한 그림판입니다</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="findmovie"
+            title="Find Movie!"
+            language={["javascript"]}
+            library={["Scss"]}
+            github={"https://github.com/tmdgp0212/FIND-MOVIE"}
+            site={"https://tangerine-medovik-e674b3.netlify.app/"}
+          >
+            <li>순수 자바스크립트로 구현한 영화검색페이지</li>
+            <li>무한스크롤기능, 연도별 영화 검색 기능 구현</li>
+          </ProjectMedium>
+          <ProjectMedium
+            name="kakao"
+            title="Kakao Corp"
+            language={["javascript"]}
+            library={["jQuery"]}
+            github={"https://github.com/tmdgp0212/Kakao-corp"}
+            site={"https://tmdgp0212.github.io/Kakao-corp/"}
+          >
+            <li>Kakao corp 페이지를 Clone하였습니다</li>
+            <li>스크롤에 따라 다양하게 반응하는 동적 웹 구현</li>
+            <li>디바이스의 크기에 따라 레이아웃이 변화하는 반응형 웹 구현</li>
+          </ProjectMedium>
+        </div>
       </S.Projects>
     </>
   );
