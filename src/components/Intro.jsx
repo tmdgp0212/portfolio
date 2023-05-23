@@ -106,11 +106,11 @@ function Intro() {
                 <div className="info__body">
                   <p className="exp">
                     <span>22.06.07-22.10.26</span> 이젠컴퓨터아카데미 UI/UX
-                    웹퍼블리셔/프론트엔드 과정 수강
+                    웹퍼블리셔 양성 과정 수강
                   </p>
                   <p className="exp">
-                    <span>22.12.12-23.06.30</span> 패스트캠퍼스 메가바이트스쿨
-                    프론트엔드 4기 수강
+                    <span>22.12.12-23.06.30</span> 패스트캠퍼스 프론트엔드 중급
+                    부트캠프 수강
                   </p>
                 </div>
               </div>
