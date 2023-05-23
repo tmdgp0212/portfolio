@@ -38,6 +38,10 @@ export const CreateBadge = ({ lan }) => {
       name = "express";
       color = "000000";
       break;
+    case "next" || "next.js":
+      name = "Next.js";
+      color = "000000";
+      break;
   }
 
   return (

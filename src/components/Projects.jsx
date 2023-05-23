@@ -61,8 +61,66 @@ function Projects() {
         <h3>Team Projects</h3>
 
         <div className="projects__team">
+          {/*           <ProjectLarge
+            team
+            inProgress
+            name="yeolda"
+            title="열다 Yeolda"
+            worker={"14인(FE 4, BE 3, UXUI 3, PM 4)"}
+            date={"23.05.22 ~ "}
+            language={["Next", "typescript"]}
+            library={["zustand", "emotion", "framer-motion", "react-hook-form"]}
+            github={"https://github.com/tmdgp0212/KDT-M4_Team2Project_Repo"}
+            site={"https://next-furniture.vercel.app/"}
+          >
+            <p>프로젝트 소개</p>
+            <ul>
+              <li>
+                실제 서비스 중인 기업의 문제점을 파악하고, 해결방안을 도출하여
+                개선된 서비스 제작 및 제공
+              </li>
+            </ul>
+            <p>상세 역할</p>
+            <ul>
+              <li>
+                Frontend팀 내 리더를 담당하여 팀원들을 리드하고, 타 직군과의
+                소통을 담당하였습니다
+              </li>
+            </ul>
+          </ProjectLarge> */}
           <ProjectLarge
             team
+            serverDown
+            name="consolelog"
+            title="연차/당직 관리 프로그램"
+            worker={"9인(FE 5 / BE 4)"}
+            date={"23.05.02 ~ 23.05.17"}
+            language={["react", "typescript"]}
+            library={["react-big-calendar", "msw", "axios", "emotion"]}
+            github={"https://github.com/Kdt4-Miniproject/FE_Mini"}
+            site={
+              "http://clendarapp-env.eba-ej5a74yz.ap-northeast-2.elasticbeanstalk.com/ "
+            }
+          >
+            <p>프로젝트 소개</p>
+            <ul>
+              <li>연차/당직을 신청하고 관리할 수 있는 프로그램입니다</li>
+            </ul>
+            <p>상세 역할</p>
+            <ul>
+              <li>
+                react-big-calendar를 가공하여 연차와 당직정보가 표현되도록
+                커스텀
+              </li>
+              <li>관리자 페이지의 유저정보 검색 및 수정기능 구현</li>
+              <li>
+                페이지의 전체적인 통일성 유지를 위해 레이아웃/디자인 컨벤션 작성
+              </li>
+            </ul>
+          </ProjectLarge>
+          <ProjectLarge
+            team
+            serverDown
             name="moodlog"
             title="Moodlog"
             worker={"4인(FE)"}
@@ -99,43 +157,34 @@ function Projects() {
               <li>Node.js기반의 Express를 활용하여 RESTful API를 구현</li>
             </ul>
           </ProjectLarge>
-          <ProjectLarge
-            team
-            name="nextfurniture"
-            title="Next Furniture"
-            worker={"5인(FE)"}
-            date={"23.01.30 ~ 23.03.03"}
-            language={["javascript"]}
-            library={["Vercel", "SwiperJS", "Navigo", "Scss"]}
-            github={"https://github.com/tmdgp0212/KDT-M4_Team2Project_Repo"}
-            site={"https://next-furniture.vercel.app/"}
-          >
-            <p>프로젝트 소개</p>
-            <ul>
-              <li>
-                넥스트퍼니쳐는 결제수단을 등록하고, 가구를 구매할 수 있는
-                가구쇼핑몰 입니다
-              </li>
-              <li>순수 자바스크립트로 제작되었습니다</li>
-            </ul>
-            <p>상세 역할</p>
-            <ul>
-              <li>
-                가구데이터를 가공하여 메인페이지, 카테고리 별 페이지, 검색
-                페이지로 나누어 구현
-              </li>
-              <li>마이페이지의 유저 프로필 수정 페이지 구현</li>
-              <li>
-                페이지의 전체적인 통일성 유지를 위해 레이아웃/디자인 컨벤션을
-                작성
-              </li>
-            </ul>
-          </ProjectLarge>
         </div>
 
         <h3>Personal Projects</h3>
 
         <div className="projects__team">
+          <ProjectLarge
+            name="finedust"
+            title="FineDustMap"
+            worker={"1인"}
+            date={"23.03.24 ~ 23.03.27"}
+            language={["react"]}
+            library={["redux", "axios", "react-router-dom", "styled-component"]}
+            github={"https://github.com/tmdgp0212/FineDustMap"}
+            site={"https://whimsical-sfogliatella-62bbe0.netlify.app/"}
+          >
+            <p>프로젝트 소개</p>
+            <ul>
+              <li>
+                시/도별 미세먼지 정보를 조회할 수 있는 미세먼지 알리미 앱 입니다
+              </li>
+            </ul>
+            <p>상세 역할</p>
+            <ul>
+              <li>공공API를 활용하여 미세먼지 데이터 공급</li>
+              <li>Redux를 활용하여 데이터의 상태 관리</li>
+              <li>localStorage에 즐겨찾기, 내 지역 정보 저장</li>
+            </ul>
+          </ProjectLarge>
           <ProjectLarge
             name="calendar"
             title="Diary Calendar"
@@ -155,29 +204,6 @@ function Projects() {
               <li>일기데이터는 로컬스토리지에 저장되며 수정과 삭제가 가능</li>
               <li>redux를 활용하여 다이어리의 상태를 관리</li>
               <li>캘린더형 보기, 리스트형 보기로 전환이 가능</li>
-            </ul>
-          </ProjectLarge>
-          <ProjectLarge
-            name="finedust"
-            title="FineDustMap"
-            worker={"5인(FE)"}
-            date={"22.09.29 ~ 22.10.05"}
-            language={["react"]}
-            library={["redux", "axios", "react-router-dom", "styled-component"]}
-            github={"https://github.com/tmdgp0212/FineDustMap"}
-            site={"https://whimsical-sfogliatella-62bbe0.netlify.app/"}
-          >
-            <p>프로젝트 소개</p>
-            <ul>
-              <li>
-                시/도별 미세먼지 정보를 조회할 수 있는 미세먼지 알리미 앱 입니다
-              </li>
-            </ul>
-            <p>상세 역할</p>
-            <ul>
-              <li>공공API를 활용하여 미세먼지 데이터 공급</li>
-              <li>Redux를 활용하여 데이터의 상태 관리</li>
-              <li>localStorage에 즐겨찾기, 내 지역 정보 저장</li>
             </ul>
           </ProjectLarge>
         </div>

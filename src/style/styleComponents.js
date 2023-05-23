@@ -459,6 +459,12 @@ export const ProjectLarge = styled.div`
       gap: 20px;
       margin-top: 20px;
 
+      .warn {
+        color: #f8312f;
+        text-align: right;
+        font-size: 12px;
+      }
+
       a {
         display: flex;
         justify-content: center;
