@@ -49,16 +49,12 @@ function ProjectLarge({
         </ul>
         <div className="detail">{children}</div>
         <div className="links">
-          {serverDown && (
-            <div className="warn">
-              해당 프로젝트는 서버가 닫혀있어 데모사이트 이용에 <br />
-              제한이 있을 수 있습니다
-            </div>
+          {!serverDown && (
+            <a target="_blank" href={site}>
+              Site
+              <FiExternalLink />
+            </a>
           )}
-          <a target="_blank" href={site}>
-            Site
-            <FiExternalLink />
-          </a>
           <a target="_blank" href={github}>
             Github
             <BsGithub />
