@@ -61,17 +61,18 @@ function Projects() {
         <h3>Team Projects</h3>
 
         <div className="projects__team">
-          {/*           <ProjectLarge
+          <ProjectLarge
             team
+            limit
             inProgress
             name="yeolda"
             title="열다 Yeolda"
-            worker={"14인(FE 4, BE 3, UXUI 3, PM 4)"}
-            date={"23.05.22 ~ "}
+            worker={"7인(FE 4, BE 3)"}
+            date={"23.05.29 ~ 23.06.28"}
             language={["Next", "typescript"]}
             library={["zustand", "emotion", "framer-motion", "react-hook-form"]}
-            github={"https://github.com/tmdgp0212/KDT-M4_Team2Project_Repo"}
-            site={"https://next-furniture.vercel.app/"}
+            github={"https://github.com/Final-DAMDA"}
+            site={"https://fe-damda.vercel.app/"}
           >
             <p>프로젝트 소개</p>
             <ul>
@@ -82,12 +83,14 @@ function Projects() {
             </ul>
             <p>상세 역할</p>
             <ul>
+              <li> 카카오 Oauth 소셜 로그인 구현 </li>
+              <li> 공통컴포넌트(헤더와 Nav 메뉴 등) 제작 </li>
+              <li> 유저 페이지의 고객후기 페이지, 서비스 완료 폼 제작 </li>
               <li>
-                Frontend팀 내 리더를 담당하여 팀원들을 리드하고, 타 직군과의
-                소통을 담당하였습니다
+                어드민 페이지의 고객 관리 페이지, 고객후기 관리 페이지 제작
               </li>
             </ul>
-          </ProjectLarge> */}
+          </ProjectLarge>
           <ProjectLarge
             team
             serverDown

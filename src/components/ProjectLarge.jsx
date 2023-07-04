@@ -5,7 +5,7 @@ import * as S from "../style/styleComponents";
 
 function ProjectLarge({
   team,
-  inProgress,
+  limit,
   serverDown,
   name,
   title,
@@ -49,6 +49,11 @@ function ProjectLarge({
         </ul>
         <div className="detail">{children}</div>
         <div className="links">
+          {limit && (
+            <span className="warn">
+              해딩 페이지는 서버가 닫혀있어 이용에 제한이 있습니다
+            </span>
+          )}
           {!serverDown && (
             <a target="_blank" href={site}>
               Site
